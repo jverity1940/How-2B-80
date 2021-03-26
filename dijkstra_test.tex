@@ -1,0 +1,70 @@
+%%%% experimenting with dijkstra typeface
+
+% ****** start of preamble ******
+\documentclass[15pt, landscape, oneside]{scrbook}
+%\KOMAoptions{paper=landscape}
+
+\usepackage{scrlayer-scrpage}
+\cohead[plain]{}
+
+% Set-up page
+\usepackage[
+paperwidth=210mm,
+paperheight=148mm,
+headsep=12pt,
+footskip=41pt,
+textheight=320pt
+%top=31mm,
+%bottom=38mm,
+%inner=22.5mm,
+%outer=23.5mm
+]{geometry}
+%\pagestyle{headings}
+
+% ****** Lualatex unicode fonts package.******
+\usepackage{fontspec}
+% ****** Load garamond font from local directory. ******
+\setmainfont{dijkstra}[
+Path = ./,
+Extension = .ttf,
+UprightFont = *,
+%BoldFont = loremipsum,
+BoldFont = *-bold,
+ItalicFont = *-italic,
+BoldItalicFont = *-italic-bold
+]
+\setsansfont{ArchitectsDaughter.ttf}
+\parskip=6pt
+\usepackage{layout}
+\usepackage{lipsum} % for dummy text only
+\usepackage[british]{babel}
+
+\begin{document}
+
+	\chapter*{How to live to 80}
+	\cohead[scrheadings]{My Heading}
+
+	\textsl{This is slanted}
+	
+	\textit{The quick brown fox \textbf{jumped} over the lazy dog} 
+	
+	\textit{THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG}
+	
+	the quick brown \textbf{fox jumped} over the lazy dog
+	
+	THE QUICK BROWN \textbf{FOX JUMPED} OVER THE LAZY DOG
+	
+%	\emph{This is emph}	
+	
+%	\textbf{This is bold}
+	
+%	\textit{This is Italic}
+	
+%	This is \textbf{plain}
+	
+	\lipsum[20-23]
+	\cohead[scrheadings]{Another Heading}
+	
+%	\layout
+	\textit{\lipsum[30-33]}
+\end{document}
