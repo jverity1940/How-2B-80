@@ -4,10 +4,14 @@
 %%%% Status: In draft
 
 %%%% ****** start of preamble ******
-\documentclass[15pt, landscape, oneside]{scrbook}
+\documentclass[fontsize=15pt, landscape, oneside]{scrbook}
+\KOMAoptions{open=any}
 
-\usepackage{scrlayer-scrpage}
-\cohead[plain]{}
+\usepackage[headsepline]{scrlayer-scrpage}
+%\ohead{Name}
+%\chead{\pagemark}
+%\ihead{Title description}
+%\cohead[plain]{ }
 
 % Set-up page
 \usepackage[
@@ -43,23 +47,24 @@ BoldItalicFont = *-italic-bold
 %%%% Set up title page constants
 \title{{\Huge \textbf{How to be 80}}}
 \subtitle{{\normalsize An irreverent guide to being an 80-Year Old}}
-\author{by \\ Old Baldy}
+\author{by Old Baldy}
 \date{{\small Written somewhen in 2021, the second Year of Covid}}
 \publishers{{\fontencoding{TS1}\selectfont\symbol{"A9}} 2021 Beresford Verity \& Partner, Publishing Division}
 
 \begin{document}
 \begin{frontmatter}
-hello		
-\maketitle[1]
+%	\cohead[scrheadings]{ }
+%hello		
+\maketitle
 \begin{center}
 	{\LARGE \textbf{Dedication}}
 	
 	I dedicate this book, which takes the place of a legacy, to my children and grandchildren, whom I love dearly.
 \end{center}
 \end{frontmatter}
-
-	\chapter*{How to live to 80}
 	\cohead[scrheadings]{My Heading}
+	\chapter*{How to live to 80}
+
 
 	\textsl{This is slanted}
 	
@@ -79,9 +84,10 @@ hello
 	
 %	This is \textbf{plain}
 	
-	\lipsum[20-23]
-	\cohead[scrheadings]{Another Heading}
+	\lipsum[20-23] \\ \\
+%	\cohead[scrheadings]{Another Heading}
 	
+	\chapter*{another chapter}
 %	\layout
 	\textit{\lipsum[30-33]}
 \end{document}

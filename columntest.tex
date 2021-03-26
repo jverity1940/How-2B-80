@@ -1,0 +1,30 @@
+\documentclass[
+%a4paper,% default
+%pagesize,% default since version 3.17
+landscape,
+fontsize=6pt,
+]{scrartcl}
+\usepackage[left=0.75cm,right=0.75cm, top=1cm, bottom=0.75cm]{geometry}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage[headsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ohead{Name}
+\chead{\pagemark}
+\ihead{Title description}
+
+\renewcommand*\pagemark{{\usekomafont{pagenumber}Page\nobreakspace\thepage}}
+\addtokomafont{pageheadfoot}{\upshape}
+
+\setlength{\columnsep}{25pt}
+\setlength{\columnseprule}{0.4pt}
+
+\usepackage{blindtext}% dummy text
+\begin{document}
+	
+	\begin{multicols*}{3}
+		\Blinddocument
+	\end{multicols*}
+\end{document}
